@@ -1,0 +1,58 @@
+/*
+ * Global Styles
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+	background: #f7f8fa;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.5;
+	font-weight: 300;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/*
+ * Letter size 8.5 x 11 inches
+ */
+.resume-wrapper {
+	width: 21.59cm;
+	height: 27.94cm;
+	margin: 30px auto;
+	box-shadow: 0 0 0.5cm rgba(0,0,0,0.15);
+	position: relative;
+	max-width: 100%;
+}
+
+/*
+ * Print adjustments
+ */
+@media print {
+  body,
+  .resume-wrapper {
+    border: 0;
+    box-shadow: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .noprint {
+    display: none;
+  }
+}
