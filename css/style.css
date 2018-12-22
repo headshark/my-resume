@@ -9,10 +9,12 @@
 
 body {
 	background: #f7f8fa;
+	color: #58677c;
 	font-family: 'Roboto', sans-serif;
-	line-height: 1.5;
 	font-weight: 300;
+	line-height: 1.5;
 	margin: 0;
+	text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,9 +25,26 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
+ul, li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #b4b8bf;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
 .text-center {
 	text-align: center;
 }
+
 
 /*
  * Letter size 8.5 x 11 inches
@@ -38,6 +57,76 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 	position: relative;
 	max-width: 100%;
 }
+
+
+/*
+ * Resume Header
+ */
+.resume-header {
+	background: #434e5e;
+	color: #fff;
+	padding: 25px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*
+ * Primary Info
+ */
+.resume-header .primary-info .name {
+	font-size: 2.25rem;
+	letter-spacing: 0.175rem;
+	text-transform: uppercase;
+}
+
+.resume-header .primary-info .contact li {
+	font-size: 1rem;
+	margin-bottom: 0.175rem;
+}
+
+.resume-header .primary-info .contact li:last-child {
+	margin-bottom: 0;
+}
+
+.resume-header .primary-info .contact .fa-container {
+	background: transparent;
+	border-radius: 0.125rem;
+	color: #b4b8bf;
+	display: inline-block;
+	font-size: 1rem;
+	height: 24px;
+	width: 24px;
+	text-align: center;
+}
+
+
+/*
+ * Secondary Info
+ */
+.resume-header .secondary-info .social li {
+	font-size: 0.875rem;
+	margin-bottom: 0.5rem;
+}
+
+.resume-header .secondary-info .social li:last-child {
+	margin-bottom: 0;
+}
+
+.resume-header .secondary-info .social .fa-container {
+	background: #fff;
+	border-radius: 0.125rem;
+	color: #434e5e;
+	display: inline-block;
+	font-size: 1rem;
+	height: 24px;
+	width: 24px;
+	text-align: center;
+	margin-right: 0.5rem;
+}
+
 
 /*
  * Print adjustments
