@@ -11,17 +11,25 @@ body {
 	background: #f7f8fa;
 	color: #58677c;
 	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
 	line-height: 1.5;
 	margin: 0;
 	text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
+	color: #434e5e;
 	margin: 0;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 a {
@@ -41,6 +49,59 @@ a:hover {
 .text-muted {
     color: #6c757d !important;
     font-weight: 400;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.col-lg-9, .col-lg-3 {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.col-lg-9 {
+	flex: 0 0 70%;
+	max-width: 70%;
+}
+
+.col-lg-3 {
+	flex: 0 0 30%;
+	max-width: 30%;
+}
+
+.badge {
+	display: inline-block;
+	padding: 0.25em 0.4em;
+	font-size: 75%;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: 0.25rem;
+}
+
+.badge-pill {
+	padding-right: 0.6em;
+	padding-left: 0.6em;
+	border-radius: 10rem;
+}
+
+.badge-primary {
+	color: #fff;
+	background-color: #434e5e;
+}
+
+.badge-secondary {
+	color: #434e5e;
+	background-color: #f8f9fa;
 }
 
 /*
@@ -73,6 +134,7 @@ a:hover {
  * Primary Info
  */
 .resume-header .primary-info .name {
+	color: #fff;
 	font-size: 2.25rem;
 	letter-spacing: 0.175rem;
 	text-transform: uppercase;
@@ -121,13 +183,6 @@ a:hover {
 	margin-right: 0.5rem;
 }
 
-.resume-header ul,
-.resume-header li {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
 /*
  * Resume Body
  */
@@ -138,11 +193,11 @@ a:hover {
 /*
  * Resume Section
  */
-.resume-body .section {
+.section {
 	margin-bottom: 1rem;
 }
 
-.resume-body .section .heading {
+.section .heading {
 	color: #434e5e;
 	font-size: 1.25rem;
 	font-weight: 700;
@@ -152,7 +207,7 @@ a:hover {
 	text-transform: uppercase;
 }
 
-.resume-body .section .heading:after {
+.section .heading:after {
 	background: #8d9aad;
 	content: "";
 	position: absolute;
@@ -162,12 +217,12 @@ a:hover {
 	width: 100%;
 }
 
-.resume-body .section .content {
+.section .timeline {
 	padding-left: 2rem;
 	position: relative;
 }
 
-.resume-body .section .content:before {
+.section .timeline:before {
 	content: "";
 	display: inline-block;
 	width: 3px;
@@ -178,11 +233,11 @@ a:hover {
 	position: absolute;
 }
 
-.resume-body .section .content .timeline {
+.section .timeline .timeline-item {
 	position: relative;
 }
 
-.resume-body .section .content .timeline:before {
+.section .timeline .timeline-item:before {
 	background: #fff;
 	content: "";
 	position: absolute;
@@ -195,32 +250,93 @@ a:hover {
 	border-radius: 50%;
 }
 
-.resume-body .section .content .timeline .info {
+.section .content {
+	margin: 0;
+}
+
+/*
+ * Experience Section
+ */
+.experience .info {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.resume-body .section .content .timeline .info .title {
+.experience .info .title {
 	color: #434e5e;
 	font-size: 1.125rem;
 	font-weight: 700;
 }
 
-.resume-body .section .content .timeline .info .company {
+.experience .info .company {
 	color: #58677c;
 	font-size: 0.875rem;
 	font-weight: 500;
 }
 
-.resume-body .section .content .timeline .position-time {
+.experience .position-time {
 	font-size: 0.875rem;
 	color: #aab4c3;
 }
 
-.resume-body .section .content .timeline .description {
+.experience .description {
 	width: 100%;
+}
+
+.experience .description ul {
+	list-style-type: disc;
+	margin: 10px 0;
+	padding: 0 0 0 35px;
+}
+
+/*
+ * Skills Section
+ */
+.skills .primary-skills ul {
+	margin-bottom: 16px;
+}
+
+.skills .primary-skills li:not(:last-child) {
+	margin-bottom: 8px;
+}
+
+.skills .primary-skills .skill-name {
+	color: #434e5e;
+	font-size: 0.8125rem;
+}
+
+.skills .primary-skills .progress {
+	display: flex;
+	height: 0.6rem;
+	overflow: hidden;
+	font-size: 0.75rem;
+	background-color: #e9ecef;
+	border-radius: 2px;
+}
+
+.skills .primary-skills .progress .progress-bar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	background-color: #434e5e;
+	transition: width 0.6s ease;
+}
+
+.skills .other-skills h4 {
+	margin-bottom: 8px;
+}
+
+.skills .other-skills li {
+	display: inline-block;
+}
+
+.skills .other-skills li:not(:last-child) {
+	margin-right: 3px;
 }
 
 /*
