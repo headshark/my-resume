@@ -18,7 +18,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #434e5e;
 	margin: 0;
 }
 
@@ -42,6 +41,11 @@ a:hover {
 	text-decoration: underline;
 }
 
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
 .text-center {
 	text-align: center !important;
 }
@@ -49,6 +53,27 @@ a:hover {
 .text-muted {
     color: #6c757d !important;
     font-weight: 400;
+}
+
+.mb-1 {
+	margin-bottom: 1rem !important;
+}
+
+.mb-2 {
+	margin-bottom: 0.5rem !important;
+}
+
+.list-inline {
+	list-style: none;
+	padding-left: 0;
+}
+
+.list-inline-item {
+	display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+	margin-right: 0.5rem;
 }
 
 .row {
@@ -194,7 +219,7 @@ a:hover {
  * Resume Section
  */
 .section {
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
 .section .heading {
@@ -235,6 +260,7 @@ a:hover {
 
 .section .timeline .timeline-item {
 	position: relative;
+	padding-bottom: 1rem;
 }
 
 .section .timeline .timeline-item:before {
@@ -255,39 +281,38 @@ a:hover {
 }
 
 /*
- * Experience Section
+ * Experience, Projects Section
  */
-.experience .info {
+.info {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.experience .info .title {
+.info .title {
 	color: #434e5e;
 	font-size: 1.125rem;
 	font-weight: 700;
 }
 
-.experience .info .company {
+.info .company {
 	color: #58677c;
 	font-size: 0.875rem;
 	font-weight: 500;
 }
 
-.experience .position-time {
+.position-time {
 	font-size: 0.875rem;
 	color: #aab4c3;
 }
 
-.experience .description {
+.description {
 	width: 100%;
 }
 
-.experience .description ul {
+.description ul {
 	list-style-type: disc;
-	margin: 10px 0;
 	padding: 0 0 0 35px;
 }
 
@@ -295,11 +320,11 @@ a:hover {
  * Skills Section
  */
 .skills .primary-skills ul {
-	margin-bottom: 16px;
+	margin-bottom: 1rem;
 }
 
 .skills .primary-skills li:not(:last-child) {
-	margin-bottom: 8px;
+	margin-bottom: 0.5rem;
 }
 
 .skills .primary-skills .skill-name {
@@ -328,7 +353,7 @@ a:hover {
 }
 
 .skills .other-skills h4 {
-	margin-bottom: 8px;
+	color: #434e5e;
 }
 
 .skills .other-skills li {
