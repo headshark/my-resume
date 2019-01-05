@@ -365,6 +365,24 @@ p {
 }
 
 /*
+ * Education Section
+ */
+.education .degree {
+	color: #434e5e;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.education .school {
+	font-size: 0.875rem;
+}
+
+.education .time {
+	color: #aab4c3;
+	font-size: 0.875rem;
+}
+
+/*
  * Print Adjustments
  */
 @media print {
