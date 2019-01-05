@@ -383,6 +383,15 @@ p {
 }
 
 /*
+ * Language Section
+ */
+.language .name {
+	color: #434e5e;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+/*
  * Print Adjustments
  */
 @media print {
